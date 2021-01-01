@@ -1,6 +1,7 @@
 import Tkinter as tk
 import os
 
+
 # TODO: change the size of the windows to 320x 480
 class window1:
     def __init__(self,master):
@@ -8,7 +9,7 @@ class window1:
         self.frame = tk.Frame(self.master)
         self.label = tk.Label(text = "Welcome to the hand me down pi").pack()
         self.ChooseLabel = tk.Label(text = "Please choose an option:").pack()
-        self.button1 = tk.Button(self.frame, text = 'TV Mode', width = 25).pack()
+        self.button1 = tk.Button(self.frame, text = 'TV Mode', width = 25, command = self.Open_TVmode).pack()
         self.button2 = tk.Button(self.frame, text = 'Portable Mode', width = 25, command = self.new_window).pack()
         self.frame.pack()
 
@@ -17,31 +18,38 @@ class window1:
         self.app = PortableWindow(self.newwindow)
         self.master.withdraw()
 
+    def Open_TVmode(self):
+        self.new_window = tk.Toplevel(self.master)
+        self.app = TVMode(self.new_window)
+        self.master.destory()
+
+
 
 class PortableWindow:
     def __init__(self,master):
         self.master = master
         self.frame = tk.Frame(self.master)
-        self.button1 = tk.Button(self.frame, text = 'Calculator', width = 25, command = self.open_Cal).pack()
-        self.button2 = tk.Button(self.frame, text = 'Timer', width = 25).pack()
-        self.button3 = tk.Button(self.frame, text = 'Share Files', width = 25).pack()
+        self.button3 = tk.Button(self.frame, text = 'Camera Mode', width = 25).pack()
+        # Watching on a small screen
+        self.button4 = tk.Button(self.frame, text = 'Portable mode', width = 25).pack()
+        self.button5 = tk.Button(self.frame, text = 'Share Files', width = 25).pack()
         self.frame.pack()
 
     def close_windows(self):
         self.master.destroy()
 
-    def open_Cal(self):
-        # linux commands to destory this window and open the calculator
-        self.master.destroy()
-        cal = 'python Calculator.py'
-        os.system(cal)
 
 
     # TODO: method to turn on bluetooth and add a file manager
 
-# TODO: add a window for the Timer
-    # TODO: add a goto back button
-    # TODO: okay button for that window
+class TVMode:
+    def __init__(self,master):
+        self.master = master
+        self.frame = tk.Frame(self.master)
+        self.button6 = tk.Button(self.frame, text = 'Media', width = 25).pack()
+        self.button7 = tk.Button(self.frame, text = 'Desktop watching video', width = 25).pack()
+        self.frame.pack()
+
 
 
 def main():
