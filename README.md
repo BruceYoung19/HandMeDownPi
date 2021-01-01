@@ -12,5 +12,6 @@ I want to create a portable camera, which can aid me on holiday. Basic functions
 - [] Kodi
 - [] Desktop viewing mode. 
 
-Why am I building this?
+## Why am I building this?
+
 I am building this is because I am on my phone more than I should be.
