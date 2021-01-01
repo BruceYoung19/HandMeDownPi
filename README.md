@@ -9,8 +9,8 @@ I want to create a portable camera, which can aid me on holiday. Basic functions
 - Work mode:
 - [ ] Desktop mode
 - Media mode:
-- [] Kodi
-- [] Desktop viewing mode. 
+- [ ] Kodi
+- [ ] Desktop viewing mode. 
 
 ## Why am I building this?
 
