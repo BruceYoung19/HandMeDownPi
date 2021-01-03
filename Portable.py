@@ -1,6 +1,15 @@
 import Tkinter as tk
 import os
 
+def Open_Retro():
+    global piGaming
+    def Gaming():
+        # change paths so I am able to boot into retropie
+        changePath = os.chdir('Retropi')
+        # TODO: running retro pi configuration file
+        os.system(changePath)
+
+
 
 # TODO: change the size of the windows to 320x 480
 class window1:
@@ -23,31 +32,32 @@ class window1:
         self.app = TVMode(self.new_window)
         self.master.destory()
 
-
-
 class PortableWindow:
     def __init__(self,master):
         self.master = master
         self.frame = tk.Frame(self.master)
         self.button3 = tk.Button(self.frame, text = 'Camera Mode', width = 25).pack()
         # Watching on a small screen
-        self.button4 = tk.Button(self.frame, text = 'Portable mode', width = 25).pack()
+        self.button4 = tk.Button(self.frame, text = 'Portable mode', width = 25,command = self.close_window).pack()
         self.button5 = tk.Button(self.frame, text = 'Share Files', width = 25).pack()
+        self.button6 = tk.Button(self.frame, text = 'Portable gaming', width = 25).pack()
         self.frame.pack()
 
-    def close_windows(self):
+    def close_window(self):
         self.master.destroy()
 
-
-
+    # TODO: method to open the camera window
     # TODO: method to turn on bluetooth and add a file manager
+
+#CameraWindow class
 
 class TVMode:
     def __init__(self,master):
         self.master = master
         self.frame = tk.Frame(self.master)
-        self.button6 = tk.Button(self.frame, text = 'Media', width = 25).pack()
-        self.button7 = tk.Button(self.frame, text = 'Desktop watching video', width = 25).pack()
+        self.button7 = tk.Button(self.frame, text = 'Media', width = 25).pack()
+        self.button8 = tk.Button(self.frame, text = 'Desktop watching video', width = 25).pack()
+        self.button9 = tk.Button(self.frame, text = 'Retro Gaming', width = 25).pack()
         self.frame.pack()
 
 
