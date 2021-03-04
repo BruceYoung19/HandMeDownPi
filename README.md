@@ -24,24 +24,26 @@ I am building this is because I am on my phone more than I should be.
 - [ ] Camera
 
 ## Installation:
-1. Install Pi OS from [Raspberry pi](https://www.raspberrypi.org/software/)
+1. Install Pi OS from [Raspberry pi]
+    - (https://www.raspberrypi.org/software/)
 2. Updating the Operating System via command line
-    [Sudo apt-get install update && upgrade]
+   - [Sudo apt-get install update && upgrade]
 3. Install Retro pie via terminal
-    [sudo apt install git lsb-release]
-    change directories:
-    [cd]
-    cloning the repostiory to setup retro pie
-    [git clone --depth=1 https://github.com/RetroPie/RetroPie-Setup.git]
-4. Change the permissons of the retro pie 
-    Changing directory
-    [cd RetroPie-Setup]
-    changing the permissons of the setup
-    [chmod +x retropie_setup.sh ]
-    execute the setup file
-    [sudo ./retropie_setup.sh]
-5. Installing tk for the GUI.
-    [sudo apt-get install python3-tk]
+   - [sudo apt install git lsb-release]
+4.change directories:
+   - [cd]
+5.cloning the repostiory to setup retro pie
+  - [git clone --depth=1 https://github.com/RetroPie/RetroPie-Setup.git]
+6. Change the permissons of the retro pie 
+   -[chmod file name]
+7. Changing directory
+  -[cd RetroPie-Setup]
+8.changing the permissons of the setup
+  - [chmod +x retropie_setup.sh]
+9. execute the setup file
+   -[sudo ./retropie_setup.sh]
+10. Installing tk for the GUI.
+   -[sudo apt-get install python3-tk]
     
 ## Acknowledgement
 
