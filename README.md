@@ -30,8 +30,10 @@ I am building this is because I am on my phone more than I should be.
    - [Sudo apt-get install update && upgrade]
 3. Install Retro pie via terminal
    - [sudo apt install git lsb-release]
+
 4.change directories:
    - [cd]
+
 5.cloning the repostiory to setup retro pie
   - [git clone --depth=1 https://github.com/RetroPie/RetroPie-Setup.git]
 6. Change the permissons of the retro pie 
